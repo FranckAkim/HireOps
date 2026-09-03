@@ -23,11 +23,13 @@ Last updated: 2026-09-03 (Week 1, Day 1)
 
 ## Decisions
 - AWS region: us-east-2
-- Domain: owned (name TBD in repo, used from Week 4 for ACM + Route 53)
-- AWS account: root MFA enabled; IAM admin user NOT yet created (Week 3 D1)
+- AWS account: root MFA enabled; IAM admin user NOT yet created (W3 D1)
+- Budget alarms: hireops (80/100 actual, 100 forecasted), hireops-monthly-50 (100 actual)
 
 ## Deferred / dropped
-- (none)
+- Domain purchase DEFERRED. Hard decision deadline: end of W3.
+  If not purchased, W4 TLS uses nip.io + Let's Encrypt (skips ACM/Route 53 DNS validation).
+  Cost if purchased: ~$14/yr (.com) or ~$4/yr (.click), plus $0.50/mo hosted zone.
 
 ## Open items
 - ADR 0001: `dev`-as-staging-boundary sentence conflicts with Jenkins design
